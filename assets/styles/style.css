@@ -1,0 +1,554 @@
+/* https://repl.it/@santoshprabakar/CSSCheatSheet#index.html */
+
+/* css reset */
+*{
+      margin: 0px;
+      padding: 0px;
+}
+body{
+    margin: 0px;
+    font-family: 'IM Fell DW Pica SC', serif;
+    color: #ffffff;
+    background-color: #000000;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* navigation bar */
+nav{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+nav ul li{
+    margin-top: 24px;
+    list-style: none;
+}
+nav ul li a{
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 5px 8px;
+    text-decoration: none;
+    transition: 1s ;
+}
+#l1 a{
+    color: #ffff00;
+}
+#l2 a{
+    color: #ff0066;
+}
+#l3 a{
+    color: #0066ff;
+}
+#l4 a{
+    color:#33cc33;
+}
+#l5 a{
+    color: #ff6600;
+}
+#l6 a{
+    color: #cc0099;
+}
+#l7 a{
+    color: #00ffff;
+}
+#l8 a{
+    color: #ff6666;
+}
+#l9 a{
+    color: #b30000;
+}
+nav ul li a:hover{
+    background: #ffffff;
+    color: #050801;
+    box-shadow:  0 0 5px #ffffff, 0 0 25px #ffffff, 0 0 50px  #ffffff, 0 0 200px  #ffffff;
+}
+
+/* home */
+.home{
+    background-image: url('../../assets/img/back1.jpeg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: table;
+}
+.inner1{
+    background: rgba(0, 0, 0, 0.7);
+    display: table-cell;
+    vertical-align: middle;
+}
+.home .inner1 h1{
+    font-size: 100px;
+    margin-left: 40px;
+}
+.home .inner1 p{
+    font-size: 30px;
+    margin-left: 50px;
+}
+#btn{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding : 25px 30px;
+    margin: 20px 50px;
+    overflow: hidden;
+    color: #03e9f4;
+    font-size: 24px;
+    transition: 0.6s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+   
+}
+#btn:nth-child(3){
+    filter: hue-rotate(310deg);
+}
+#btn:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow:  0 0 5px #03e9f4, 0 0 25px  #03e9f4, 0 0 50px  #03e9f4, 0 0 200px  #03e9f4;
+}
+#btn span{
+    display: block;
+    position: absolute;
+}
+#btn span:nth-child(1){
+    top: 0px;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animation1 1s linear infinite;
+}
+@keyframes animation1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgb(0, 238, 255));
+    animation: animation2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animation2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, rgb(0, 238, 255));
+    animation: animation3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animation3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, rgb(0, 238, 255));
+    animation: animation4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animation4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+/* background section */
+#background, #borders, #boxm, #font, #transition, #anime, #table, #text{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    transition: 2s;
+    border-bottom: 9px dotted #d4cece;
+}
+#background, #boxm, #transition, #table{
+    background: linear-gradient(50deg,  #380036 , #0CBABA );
+    animation: anime 5s ease infinite;
+    background-size: 200%;
+}
+#borders, #font, #anime, #text{
+    background: linear-gradient(-49deg,  #0D324D , #7F5A83 );
+    animation: anime 5s ease infinite;
+    background-size: 200%;
+}
+
+@keyframes anime{
+    0%{
+       background-position: 0% 50%; 
+    }
+    50%{
+        background-position: 50% 100%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+#background div h2, #borders div h2, #boxm div h2, #font div h2, #transition div h2, #anime div h2, #table div h2, #text div h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+#background div h2{
+    color: #ff0066;
+}
+#borders div h2{
+    color: #0066ff;
+}
+#boxm div h2{
+    color:#33cc33;
+}
+#font div h2{
+    color: #ff6600;
+}
+#transition div h2{
+    color: #cc0099;
+}
+#anime div h2{
+    color: #00ffff;
+}
+#table div h2{
+    color: #ff6666;
+}
+#text div h2{
+    color: #b30000;
+}
+#background div img, #borders div img, #boxm div img, #font div img, #transition div img, #anime div img, #table div img, #text div img{
+    height: 379px;
+    width: auto;
+}
+#background div a, #borders div a, #boxm div a, #font div a, #transition div a, #anime div a, #table div a, #text div a{
+    font-size: 25px;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 6px 12px;
+    transition: 0.5s;
+}
+#background div a:hover, #borders div a:hover, #boxm div a:hover, #font div a:hover, #transition div a:hover, #anime div a:hover, #table div a:hover, #text div a:hover{
+    background: #ffffff;
+    color: #050801;
+    box-shadow:  0 0 5px #ffffff, 0 0 25px #ffffff, 0 0 50px  #ffffff, 0 0 200px  #ffffff;
+}
+.inner{
+    text-align: center;
+}
+
+/* background page */
+.homebg{
+    background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(253,101,133,1) 0%, rgba(255,211,165,1) 90% );
+    height: 600px;
+    width: 100%;
+    font-size: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bgs{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;   
+}
+.bgd{
+    margin: 3px;
+    width: 600px;
+    text-align: left;
+}
+.bgh{
+    font-size: 70px;
+}
+.inner-list{
+    margin-left: 40px;
+    list-style: square;
+    color: #ff0066;
+    font-size: 30px;
+}
+/* borders page */
+.homebor{
+    background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+    height: 600px;
+    width: 100%;
+    font-size: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* box-model page */
+.homebox{
+    background-image: radial-gradient( circle farthest-corner at 2.3% 23.2%,  rgba(0,232,253,1) 8.7%, rgba(7,53,122,1) 74.7% );
+    height: 600px;
+    width: 100%;
+    font-size: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* fonts page */
+.homefont{
+    background-image: linear-gradient( 110.1deg,  rgba(34,126,34,1) 2.9%, rgba(168,251,60,1) 90.3% );
+    height: 600px;
+    width: 100%;
+    font-size: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* transition page */
+.hometrans{
+    background-image: linear-gradient( 109.8deg,  rgba(250,111,152,1) 5.6%, rgba(255,189,55,1) 91.5% );
+    height: 600px;
+    width: 100%;
+    font-size: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* anime page */
+.homeanim{
+    background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+    height: 600px;
+    width: 100%;
+    font-size: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* table page */
+.hometab{
+    background-image: linear-gradient( 90.2deg,  rgba(190,70,102,0.93) -15.6%, rgba(252,154,154,1) -15.6%, rgba(190,70,102,0.92) 17.9%, rgba(58,13,48,1) 81.6% );
+    height: 600px;
+    width: 100%;
+    font-size: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* text page */
+.hometex{
+    background: linear-gradient(to right, #ad5389, #3c1053);
+    height: 600px;
+    width: 100%;
+    font-size: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.txd {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    height: 100vh;
+    width: 1000px;
+}
+.txd iframe{
+    height: 600px;
+}
+/* media queries */
+@media (min-width : 320px) and (max-width : 767px){
+    nav ul li a{
+        font-size: 15px;
+    }
+    .inner1{
+        text-align: center;
+    }
+    .home .inner1 h1{
+        margin-left: 10px;
+        padding-top: 132px;
+        font-size: 34px;
+    }
+    .home .inner1 p{
+        margin-left: 5px;
+        font-size: 17px;
+    }
+    #btn {
+        padding: 16px 13px;
+        margin: 15px 21px;
+        font-size: 12px;
+    }
+    #background, #borders, #boxm, #font, #transition, #anime, #table, #text{
+        flex-direction: column;
+    }
+    #background div img, #borders div img, #boxm div img, #font div img, #transition div img, #anime div img, #table div img, #text div img{
+        height: 150px;
+        width: auto;
+    }
+    #background div h2, #borders div h2, #boxm div h2, #font div h2, #transition div h2, #anime div h2, #table div h2, #text div h2{
+        font-size: 36px;
+        margin-bottom: 14px;
+    }
+    #background div a, #borders div a, #boxm div a, #font div a, #transition div a, #anime div a, #table div a, #text div a{
+        font-size: 15px;
+    }
+    .homebg, .homebor, .homebox, .homefont, .hometab, .hometex, .hometrans, .homeanim{
+        font-size: 20px;
+        text-align: center;
+    }
+    .bgh{
+        font-size: 35px;
+        text-align: center;
+    }
+    .bgd{
+        width: 300px;
+    }
+    .inner-list{
+        font-size: 16px;
+        margin-left: 123px;
+    }
+    iframe{
+        margin: 0px 5px;
+    }
+}
+@media (min-width : 768px) and (max-width : 1023px){
+    nav ul li a{
+        font-size: 13px;
+    }
+    .home .inner1 h1{
+        font-size: 65px;
+    }
+    .home .inner1 p {
+        font-size: 19px;
+    }
+    #btn{
+        padding: 25px 30px;
+        margin: 6px 46px;
+        font-size: 14px; 
+    }
+    #background, #borders, #boxm, #font, #transition, #anime, #table, #text{
+        flex-direction: column;
+    }
+    #background div img, #borders div img, #boxm div img, #font div img, #transition div img, #anime div img, #table div img, #text div img{
+        height: 309px;
+        width: auto;
+    }
+    #background div h2, #borders div h2, #boxm div h2, #font div h2, #transition div h2, #anime div h2, #table div h2, #text div h2{
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+    .homebg, .homebor, .homebox, .homefont, .hometab, .hometex, .hometrans, .homeanim{
+        font-size: 40px;
+        text-align: center;
+    }
+    .bgh{
+        font-size: 35px;
+        text-align: center;
+    }
+    .inner-list{
+        font-size: 18px;
+        margin-left: 300px;
+    }
+    iframe{
+        margin: 0px 5px;
+    }
+}
+@media (min-width : 1024px) and (max-width : 1439px){
+    nav ul li a{
+        font-size: 19px;
+    }
+    #background, #borders, #boxm, #font, #transition, #anime, #table, #text{
+        flex-direction: column;
+    }
+    .homebg, .homebor, .homebox, .homefont, .hometab, .hometex, .hometrans, .homeanim{
+        font-size: 60px;
+        text-align: center;
+    }
+    .bgh{
+        font-size: 40px;
+        text-align: center;
+    }
+    .inner-list{
+        font-size: 17px;
+        margin-left: 300px;
+    }
+    iframe{
+        margin: 0px 5px;
+    }
+}
+@media (min-width : 1440px) and (max-width : 2559px){
+
+}
+@media (min-width : 2560px){
+    nav ul li a{
+        font-size: 44px;
+    }
+    .inner1{
+        text-align: center;
+    }
+    .home .inner1 h1{
+        font-size: 170px;
+    }
+    .home .inner1 p{
+        font-size: 52px;
+    }
+    #btn{
+        font-size: 42px;
+    }
+    #background div img, #borders div img, #boxm div img, #font div img, #transition div img, #anime div img, #table div img, #text div img {
+        height: 545px;
+        width: auto;
+    }
+    #background div h2, #borders div h2, #boxm div h2, #font div h2, #transition div h2, #anime div h2, #table div h2, #text div h2 {
+        font-size: 100px;
+    }
+    #background div a, #borders div a, #boxm div a, #font div a, #transition div a, #anime div a, #table div a, #text div a {
+        font-size: 53px;
+    }
+    .homebg, .homebor, .homebox, .homefont, .hometab, .hometex, .hometrans, .homeanim{
+        font-size: 100px;
+        height: 900px;
+    }
+    .bgs{
+        height: 800px;
+    }
+    .bgd{
+        width: 900px;
+    }
+    .bgh{
+        font-size: 106px;
+    }
+    .inner-list{
+        font-size: 40px;
+        margin-left: 300px;
+    }
+}
